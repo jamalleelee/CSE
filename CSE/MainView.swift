@@ -53,7 +53,7 @@ struct ContentView: View {
     #endif
     
     var body: some View {
-        #if IOS
+        #if iOS
         @ObservedObject var storeManager = StoreManager()
         #endif
         NavigationStack {

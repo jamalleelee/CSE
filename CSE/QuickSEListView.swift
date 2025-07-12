@@ -26,7 +26,7 @@ struct QuickSEListView: View {
                 }
             }
             
-            // Current Quick SEs ListdisplayName
+            // Current Quick Search Engines
             Section {
                 ForEach(quickCSE.keys.sorted(), id: \.self) { cseID in
                     if let cseData: CSEDataManager.CSEData = quickCSE[cseID] {
