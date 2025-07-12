@@ -92,8 +92,8 @@ class CSEDataManager {
         if let disablePercentEncoding = data["disablePercentEncoding"] as? Bool {
             parsedData.disablePercentEncoding = disablePercentEncoding
         }
-        if let maxQueryLength = data["maxQueryLength"] as? Int? {
-            if maxQueryLength == nil || maxQueryLength ?? -1 < 0 {
+        if let maxQueryLength = data["maxQueryLength"] as? Int {
+            if maxQueryLength < 0 {
                 parsedData.maxQueryLength = nil
             } else {
                 parsedData.maxQueryLength = maxQueryLength
